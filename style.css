@@ -120,7 +120,7 @@ body {
     font-size: 30px;
 }
 
-.services__description {
+.description {
     color: #767E9E;
     font-size: 18px;
 }
@@ -170,4 +170,45 @@ body {
 
 .services__item-icon--move-down {
     top: 25%;
+}
+
+.decoration-line--white {
+    background-color: #ffffff;
+}
+
+.portfolio {
+    background-color: #2D303A;
+    height: 864px;
+}
+
+.portfolio__tabs {
+    margin-bottom: 18px;
+}
+
+.portfolio__tab {
+    color: #767E9E;
+    text-decoration: none;
+    border: 2px solid #767E9E;
+    border-radius: 5px;
+    padding: 3px 5px 5px;
+    margin-right: 10px;
+}
+
+.portfolio__tab--active {
+    color: #DEDEDE;
+    border-color: #BBBBBB;
+}
+
+.portfolio__pictures {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 68px;
+    height: 611px;
+    overflow: hidden;
+}
+
+.portfolio__picture {
+    margin-bottom: 25px;
 }
