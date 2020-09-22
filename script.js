@@ -40,3 +40,66 @@ arrowLeft.addEventListener('click', () => {
     counter = images.length - 1;
   }
 });
+
+const navigationLinks = document.querySelectorAll('.navigation__link');
+const portfolioTabs = document.querySelectorAll('.portfolio__tab');
+const portfilioPictures = document.querySelectorAll('.portfolio__picture');
+const portfilioPicturesCount = portfilioPictures.length;
+
+const getRandomInt = (max) => Math.floor(Math.random() * Math.floor(max));
+
+const changeActiveTab = (tabs, newClass) => {
+  for (const element of tabs) {
+    element.addEventListener('click', (event) => {
+      for (const link of tabs) {
+        link.classList.remove(newClass);
+      }
+      event.target.classList.add(newClass);
+    });
+  }
+};
+
+changeActiveTab(navigationLinks, 'navigation__link--active');
+
+for (const element of portfolioTabs) {
+  element.addEventListener('click', (event) => {
+    event.preventDefault();
+    for (const element of portfilioPictures) {
+      element.style.order = `${getRandomInt(portfilioPicturesCount)}`;
+    }
+  });
+}
+
+changeActiveTab(portfolioTabs, 'portfolio__tab--active');
+
+const burgerButton = document.querySelector('.header__burger');
+const navigation = document.querySelector('.navigation');
+const separators = document.querySelectorAll('.navigation__separator');
+const navigationItems = document.querySelectorAll('.navigation__item');
+const logo = document.querySelector('.header__logo');
+const shadow = document.querySelector('.header__shadow');
+
+burgerButton.addEventListener('click', () => {
+  burgerButton.classList.toggle('header__burger--active');
+  burgerButton.classList.toggle('header__burger--not-active');
+  navigation.classList.toggle('navigation--mobile');
+  logo.classList.toggle('header__logo--active');
+  shadow.classList.toggle('header__shadow--active');
+
+  for (const element of separators) {
+    element.style.display = 'none';
+  }
+  for (const element of navigationItems) {
+    element.style.display = 'block';
+  }
+});
+
+for (const element of navigationLinks) {
+  element.addEventListener('click', () => {
+    burgerButton.classList.remove('header__burger--active');
+    burgerButton.classList.add('header__burger--not-active');
+    navigation.classList.remove('navigation--mobile');
+    logo.classList.remove('header__logo--active');
+    shadow.classList.remove('header__shadow--active');
+  });
+}

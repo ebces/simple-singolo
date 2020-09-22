@@ -8,18 +8,20 @@
 </head>
 <body>
     <header class="header">
+        <div class="header__burger header__burger--not-active"></div>
+        <div class="header__shadow"></div>
         <img src="assets/images/logo.png" alt="logo" class="header__logo">
         <nav>
             <ul class="navigation">
-                <li><a href="#" class="navigation__link navigation__link--active">HOME</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link navigation__link--active">HOME</a></li>
                 <li class="navigation__separator">&middot;</li>
-                <li><a href="#" class="navigation__link">SERVICES</a></li>
+                <li class="navigation__item"><a href="#services" class="navigation__link">SERVICES</a></li>
                 <li class="navigation__separator">&middot;</li>
-                <li><a href="#" class="navigation__link">PORTFOLIO</a></li>
+                <li class="navigation__item"><a href="#portfolio" class="navigation__link">PORTFOLIO</a></li>
                 <li class="navigation__separator">&middot;</li>
-                <li><a href="#" class="navigation__link">ABOUT</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link">ABOUT</a></li>
                 <li class="navigation__separator">&middot;</li>
-                <li><a href="#" class="navigation__link">CONTACT</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link">CONTACT</a></li>
             </ul>
         </nav>
     </header>
@@ -33,7 +35,7 @@
         <img src="assets/images/arrow-right.png" alt="arrow-right" class="slider__arrow-right">
     </section>
     <div class="decoration-line decoration-line--red"></div>
-    <section class="services">
+    <section class="services" id="services">
         <div class="wrapper">
             <h1 class="title">
                 Our Services
@@ -142,7 +144,7 @@
         </div>
     </section>
     <div class="decoration-line decoration-line--white"></div>
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
         <div class="wrapper">
             <h2 class="title">
                 Portfolio
@@ -167,7 +169,7 @@
                 <img src="assets/images/portfolio-8.png" alt="picture8" class="portfolio__picture">
                 <img src="assets/images/portfolio-9.png" alt="picture9" class="portfolio__picture">
                 <img src="assets/images/portfolio-10.png" alt="picture10" class="portfolio__picture">
-                <img src="assets/images/portfolio-12.png" alt="picture11" class="portfolio__picture">
+                <img src="assets/images/portfolio-11.png" alt="picture11" class="portfolio__picture">
                 <img src="assets/images/portfolio-12.png" alt="picture12" class="portfolio__picture">
             </div>
         </div>
@@ -181,14 +183,17 @@
             <div class="social__circle"> <a href="https://www.facebook.com/" class="social__link" target="_blank"><img
                         src="assets/images/ico-facebook--nocircle.png" alt="facebook" class="social__icon"></a>
             </div>
-            <div class="social__circle"> <a href="https://www.google.com/?hl=ru" class="social__link" target="_blank"><img
-                        src="assets/images/ico-google-plus--nocircle.png" alt="google" class="social__icon"></a>
+            <div class="social__circle"> <a href="https://www.google.com/?hl=ru" class="social__link"
+                    target="_blank"><img src="assets/images/ico-google-plus--nocircle.png" alt="google"
+                        class="social__icon"></a>
             </div>
-            <div class="social__circle"> <a href="https://twitter.com/?lang=ru" class="social__link" target="_blank"><img
-                        src="assets/images/ico-twitter--nocircle.png" alt="twitter" class="social__icon"></a>
+            <div class="social__circle"> <a href="https://twitter.com/?lang=ru" class="social__link"
+                    target="_blank"><img src="assets/images/ico-twitter--nocircle.png" alt="twitter"
+                        class="social__icon"></a>
             </div>
-            <div class="social__circle"> <a href="https://twitter.com/?lang=ru" class="social__link" target="_blank"><img
-                        src="assets/images/ico-linkedin--nocircle.png" alt="linkedin" class="social__icon"></a>
+            <div class="social__circle"> <a href="https://twitter.com/?lang=ru" class="social__link"
+                    target="_blank"><img src="assets/images/ico-linkedin--nocircle.png" alt="linkedin"
+                        class="social__icon"></a>
             </div>
         </div>
     </footer>
