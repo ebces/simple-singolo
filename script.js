@@ -1,5 +1,5 @@
-const arrowLeft = document.querySelector('.slider__arrow-left');
-const arrowRight = document.querySelector('.slider__arrow-right');
+const arrowLeft = document.querySelector('.slider__arrow--left');
+const arrowRight = document.querySelector('.slider__arrow--right');
 const sliderLine = document.querySelector('.slider__line');
 const images = document.querySelectorAll('.slider__photo');
 
@@ -84,7 +84,6 @@ burgerButton.addEventListener('click', () => {
   burgerButton.classList.toggle('header__burger--not-active');
   navigation.classList.toggle('navigation--mobile');
   logo.classList.toggle('header__logo--active');
-  shadow.classList.toggle('header__shadow--active');
 
   for (const element of separators) {
     element.style.display = 'none';
@@ -100,6 +99,38 @@ for (const element of navigationLinks) {
     burgerButton.classList.add('header__burger--not-active');
     navigation.classList.remove('navigation--mobile');
     logo.classList.remove('header__logo--active');
-    shadow.classList.remove('header__shadow--active');
   });
 }
+
+const home = document.querySelector('.header');
+const services = document.querySelector('.services');
+const portfolio = document.querySelector('.portfolio');
+
+const homePositionY = home.getBoundingClientRect().y + window.pageYOffset;
+const servicesPositionY = services.getBoundingClientRect().y + window.pageYOffset;
+const portfolioPositionY = portfolio.getBoundingClientRect().y + window.pageYOffset;
+
+const homeLink = document.getElementById('homeId');
+const servicesLink = document.getElementById('servicesId');
+const portfolioLink = document.getElementById('portfolioId');
+
+window.addEventListener('scroll', () => {
+  if (window.pageYOffset >= homePositionY) {
+    for (let element of navigationLinks) {
+      element.classList.remove('navigation__link--active');
+    }
+    homeLink.classList.add('navigation__link--active');
+  }
+  if (window.pageYOffset >= servicesPositionY) {
+    for (let element of navigationLinks) {
+      element.classList.remove('navigation__link--active');
+    }
+    servicesLink.classList.add('navigation__link--active');
+  }
+  if (window.pageYOffset >= portfolioPositionY) {
+    for (let element of navigationLinks) {
+      element.classList.remove('navigation__link--active');
+    }
+    portfolioLink.classList.add('navigation__link--active');
+  }
+})
