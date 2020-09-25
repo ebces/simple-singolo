@@ -46,7 +46,7 @@ body {
     color: #F06C64;
 }
 
-.navigation__item--separator {
+.navigation__item:nth-child(1) {
     list-style-type: none;
 }
 
